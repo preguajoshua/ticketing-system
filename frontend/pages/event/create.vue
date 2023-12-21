@@ -6,12 +6,20 @@
           cols="12"
           md="12"
         >
-          <h1>
-            Basic Info
-          </h1>
-          <p>
-            Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.
-          </p>
+          <v-card
+            class="mx-auto"
+          >
+            <v-card-item>
+              <div>
+                <div class="text-h5 mb-1">
+                  Basic Info
+                </div>
+                <div class="caption text-secondary">
+                  Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.
+                </div>
+              </div>
+            </v-card-item>
+          </v-card>
         </v-col>
       </v-row>
 
@@ -20,11 +28,21 @@
           cols="12"
           md="12"
         >
-          <v-text-field
-            v-model="event_name"
-            label="Event Title"
-            required
-          />
+          <v-card
+            class="mx-auto"
+          >
+            <div class="text-h5 mb-1 bold">
+              Event Info
+            </div>
+            <v-card-item>
+              <v-text-field
+                v-model="event_name"
+                label="Event Title"
+                variant="outlined"
+                required
+              />
+            </v-card-item>
+          </v-card>
         </v-col>
       </v-row>
 
@@ -160,3 +178,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .v-card {
+    padding: 20px
+  }
+</style>
